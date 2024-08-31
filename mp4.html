@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多视频播放页面</title>
+<style>
+  body {
+    margin: 0;
+    padding: 240px;
+    font-family: 'Arial', sans-serif;
+  }
+  .video-container {
+    margin-bottom: 20px; /* 在视频容器之间添加一些空间 */
+    width: 1000%;
+    max-width: 800px; /* 视频最大宽度 */
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  video {
+    width: 100%;
+    height: auto;
+  }
+  .video-container::after {
+    content: '';
+    display: block;
+    padding-bottom: 6.25%; /* 16:9 Aspect Ratio */
+  }
+</style>
+</head>
+<body>
+
+<div class="video-container">
+  <video controls>
+    <source src="./2.mp4" type="video/mp4">
+    您的浏览器不支持视频标签。
+  </video>
+</div>
+
+<div class="video-container">
+  <video controls>
+    <source src="./1.mp4" type="video/mp4">
+    您的浏览器不支持视频标签。
+  </video>
+</div>
+
+<!-- 可以继续添加更多视频容器和视频标签 -->
+
+</body>
+</html>
